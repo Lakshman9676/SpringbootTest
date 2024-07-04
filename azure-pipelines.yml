@@ -24,8 +24,7 @@ steps:
 - script: |
               mkdir -p $(Build.ArtifactStagingDirectory)
               cp target/*.jar $(Build.ArtifactStagingDirectory)/
-            displayName: 'Copy JAR to Artifact Staging Directory'
-            
+              
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
